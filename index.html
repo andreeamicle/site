@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <div class="container-fluid">
+
+        <div class="row" id="main-page">
+            <div class="col-md-1 col-sm-2" id="left-sidebar">
+                <ul></ul>
+            </div>
+            <div class="col-md-6 col-sm-6" id="middle-section" src="playground/app.js">
+
+
+            </div>
+            <div class="col-md-3 col-sm-3" id="right-sidebar">
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="playground/app.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        var getKeys = function(obj) {
+            var keys = [];
+            for (var key in obj) {
+                keys.push(key);
+            }
+            return keys;
+        }
+    $(document).ready(function(){
+
+            $.get("https://api.coinmarketcap.com/v2/ticker/?start=1&limit=20", function(data, status){
+
+                var arr = getKeys(data.data);
+                for(var i = 0; i < 20; i++) {
+                    console.log(data.data[arr[i]]);
+                }
+                for(var i = 0; i < 20; i++) {
+                    console.log(data.data[arr[i]].symbol, data.data[arr[i]].quotes.USD.price);
+                    $('#left-sidebar ul').append("<li><span class='symbol'>" + data.data[arr[i]].symbol + '</span>  ' + "<div class='currency-right-values'><span class='price'>$" + data.data[arr[i]].quotes.USD.price.toFixed(2) + "</span> " + "<span class='percent-change'>" + data.data[arr[i]].quotes.USD.percent_change_24h + '%' + "</span></div>" + "</li>");
+                    $(".percent-change:contains('-')").addClass('red');
+                }
+        });
+
+        //________________________||||||||||_______________________
+        $.ajax({
+
+            // The 'type' property sets the HTTP method.
+            // A value of 'PUT' or 'DELETE' will trigger a preflight request.
+            type: 'GET',
+
+            // The URL to make the request to.
+            url: 'https://cryptopanic.com/api/posts/?auth_token=33bf0f043ad8d7a04f7e09b08903cc178ee6b7fe&public=true',
+
+            // The 'contentType' property sets the 'Content-Type' header.
+            // The JQuery default for this property is
+            // 'application/x-www-form-urlencoded; charset=UTF-8', which does not trigger
+            // a preflight. If you set this value to anything other than
+            // application/x-www-form-urlencoded, multipart/form-data, or text/plain,
+            // you will trigger a preflight request.
+            contentType: 'text/json',
+
+            xhrFields: {
+                // The 'xhrFields' property sets additional fields on the XMLHttpRequest.
+                // This can be used to set the 'withCredentials' property.
+                // Set the value to 'true' if you'd like to pass cookies to the server.
+                // If this is enabled, your server must respond with the header
+                // 'Access-Control-Allow-Credentials: true'.
+                withCredentials: false
+            },
+
+            headers: {
+                // Set any custom headers here.
+                // If you set any non-simple headers, your server must include these
+                // headers in the 'Access-Control-Allow-Headers' response header.
+            },
+
+            success: function(data) {
+                console.log(data);
+            },
+
+            error: function() {
+                // Here's where you handle an error response.
+                // Note that if the error was due to a CORS issue,
+                // this function will still fire, but there won't be any additional
+                // information about the error.
+            }
+        });
+    });
+</script>
+  </body>
+</html>

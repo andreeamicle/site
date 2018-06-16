@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+#main-page {
+	background-color: #000;
+	height: 100%;
+}
+#left-sidebar, #right-sidebar {
+	border: 1px solid #30343c;
+	border-top: none;
+	background-color: #202328;
+	height: 100vh;
+}
+#left-sidebar {
+	color: #fff;
+	padding: 0;
+}
+#right-sidebar {
+	color: red;
+
+}
+#middle-section {
+	color:red !important;
+}
+#left-sidebar ul {
+	list-style-type: none;
+	padding: 0;
+}
+#left-sidebar li {
+	padding: 4px 10px 4px 10px;
+	border-bottom: 1px solid #30343c;
+}
+.percent-change {
+	color: green;
+	text-align: right;
+}
+.price {
+	text-align: right;
+}
+.red {
+	color: red !important;
+}
+.symbol {
+	line-height: 3;
+}
+.currency-right-values {
+	float: right;
+	display: inline-grid;
+}

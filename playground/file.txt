@@ -1,0 +1,22 @@
+<ul>
+    <li>Should Cryptocurrencies be Taught in Schools?</li>
+    <li>'Selling crypto now is like selling Apple in 2001' - Business Insider Article</li>
+    <li>Aussie Crypto Exchange Blockbid Partners with Risk Management Giant LexisNexis</li>
+    <li>Blockchains Are GDPR's Kryptonite</li>
+    <li>RT @alistairmilne: Bitcoin dominance back above 40%</li>
+    <li>"If you are opposed to Bitcoin being used as cash, then you are opposed to Bitcoin." - Roger Ver</li>
+    <li>Wow wow wow</li>
+    <li>BIS GM Argues New Cryptos Are “the Alchemy of the Age of Innovation”</li>
+    <li>John McAfee Will Fight SEC ‘With Every Last Breath’</li>
+    <li>Workaround for ICX Token Transfer Disable Bug, this is the ONLY way to permanently prevent transfers from being locked without redeploying a contract.</li>
+    <li>Hours after the bug fix, these block producers are still not online: eosisgravity, bitfinexeos1, eoshuobipool, zbeosbp11111.</li>
+    <li>CryptoZombies Creator Launches Kickstarter Campaign for Blockchain Trading Card Game</li>
+    <li>Ripple’s CEO says – ‘We’re first a payments company’</li>
+    <li>EOS Blockchain Network Crashes After 48 Hours of Going Live</li>
+    <li>Ripple To See A Positive Trend With This News</li>
+    <li>ETC - The True Ethereum</li>
+    <li>UNOFFICIAL release of GUI wallet version 0.12.2 - 'Impatient'</li>
+    <li>Ethereum [ETH] API release: Music ninja ‘Diddy’ and Zap oracles partner up!</li>
+    <li>Gilmore Girls’ Alexis Bledel to Star in Bitcoin Thriller ‘Crypto’</li>
+    <li>What is Going On With the Crypto Markets, Experts Share Opinions</li>
+</ul>
